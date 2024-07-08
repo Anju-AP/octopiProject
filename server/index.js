@@ -8,7 +8,9 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
-mongoose.connect("mongodb://127.0.0.1:27017/octopi")
+// mongoose.connect("mongodb://127.0.0.1:27017/octopi")
+let uri="mongodb+srv://anjuap656:9NQRWN6GquVOhaFj@cluster0.vfmzc9m.mongodb.net/"
+mongoose.connect(uri)
 
 mongoose.connection
 .once("open",()=>{console.log("db is connected");})
